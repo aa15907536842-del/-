@@ -1,1 +1,171 @@
-# -
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>和心日語 - 從零開始學日語</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+ 
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Noto Sans TC', system-ui, sans-serif;
+      background:#ffffff;
+      color:#1a1a1a;
+      line-height:1.6;
+    }
+    :root {
+      --primary-red: #e60012;
+      --dark-red: #c8102e;
+      --gray: #444;
+      --light-gray: #777;
+    }
+    header {
+      position: fixed;
+      top:0; left:0; right:0;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      z-index:1000;
+      padding:1rem 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo {
+      font-size:2.2rem;
+      font-weight:900;
+      color:var(--primary-red);
+    }
+    nav a {
+      margin-left:2rem;
+      text-decoration:none;
+      color:var(--gray);
+      font-weight:500;
+      transition:0.2s;
+    }
+    nav a:hover { color:var(--primary-red); }
+    /* Hero */
+    .hero {
+      height:100vh;
+      min-height:680px;
+      background: linear-gradient(135deg, #fff 0%, #fffaf5 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 6%;
+    }
+    .hero-content {
+      max-width:1000px;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      font-weight:900;
+      color:var(--primary-red);
+      margin-bottom:1rem;
+    }
+    .hero .subtitle {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      color:var(--gray);
+      margin-bottom:3.5rem;
+    }
+    /* 三個資源按鈕 */
+    .resource-buttons {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:1.8rem;
+      max-width:900px;
+      margin:0 auto;
+    }
+    .res-btn {
+      background:var(--primary-red);
+      color:white;
+      font-size:1.4rem;
+      font-weight:700;
+      padding:1.8rem 2.2rem;
+      border-radius:12px;
+      text-decoration:none;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 24px rgba(230,0,18,0.28);
+      transition:all 0.3s ease;
+    }
+    .res-btn:hover {
+      transform:translateY(-6px);
+      box-shadow:0 14px 32px rgba(230,0,18,0.38);
+      background:var(--dark-red);
+    }
+    /* 特色區 */
+    .features {
+      padding:5rem 6% 7rem;
+      background:white;
+      text-align:center;
+    }
+    .section-title {
+      font-size:2.6rem;
+      color:var(--primary-red);
+      margin-bottom:3rem;
+    }
+    footer {
+      background:var(--primary-red);
+      color:white;
+      text-align:center;
+      padding:3.5rem 6%;
+    }
+    @media (max-width:768px) {
+      .res-btn { font-size:1.25rem; padding:1.5rem 1.8rem; }
+      .hero h1 { font-size:4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導航（簡化版） -->
+  <header>
+    <div class="logo">和心日語</div>
+    <nav>
+      <a href="#">首頁</a>
+      <a href="https://codepen.io/zuyruays-the-looper/full/VYKZgjq" target="_blank">生字表</a>
+      <a href="https://codepen.io/zuyruays-the-looper/full/OPRLdQy" target="_blank">資源</a>
+      <a href="https://codepen.io/zuyruays-the-looper/full/ogzvmeJ" target="_blank">五十音</a>
+    </nav>
+  </header>
+
+  <!-- Hero + 三個按鈕（也改成指向 CodePen，並在新分頁開啟） -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>和心日語</h1>
+      <div class="subtitle">從問候語、數字開始，輕鬆學日語</div>
+
+      <div class="resource-buttons">
+        <a href="https://codepen.io/zuyruays-the-looper/full/VYKZgjq" class="res-btn" target="_blank">生字表</a>
+        <a href="https://codepen.io/zuyruays-the-looper/full/OPRLdQy" class="res-btn" target="_blank">學習資源</a>
+        <a href="https://codepen.io/zuyruays-the-looper/full/ogzvmeJ" class="res-btn" target="_blank">五十音圖</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 簡單介紹區 -->
+  <section class="features">
+    <h2 class="section-title">立即開始你的日語學習之旅</h2>
+    <p style="font-size:1.3rem; max-width:800px; margin:0 auto 2rem; color:#555;">
+      點擊上方按鈕，進入生字表練習問候語與數字、瀏覽推薦 YouTube 資源，或從五十音打好基礎。
+    </p>
+    <p style="font-size:1.1rem; color:#777;">
+      全部免費、含語音發音，適合零基礎初學者。
+    </p>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer>
+    <h2 style="font-size:2.2rem; margin-bottom:1.5rem;">準備好一起學日語了嗎？</h2>
+    <p>© 2026 和心日語 | 讓學習變得簡單有趣</p>
+  </footer>
+
+</body>
+</html># -
